@@ -1430,12 +1430,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   .testimonials-avatar-box img { width: 80px; }
 
   .testimonials-item-title {
-    
+    font-weight: normal;
   }
 
   .testimonials-text {
     line-clamp: 2;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 9;
   }
 
   /* testimonials modal */
@@ -1876,31 +1876,79 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-	 * RESUME
-	 */
+ * RESUME - Responsive Styles
+ */
 
-  .timeline-text { max-width: 700px; }
+/* Base Styles */
+.timeline-text {
+  max-width: 700px;
+  margin: 0 auto; /* Center content */
+}
 
+.bulletpoins {
+  color: var(--light-gray-70);
+  font-size: 12px;
+  text-align: justify;
+  padding: 0 10px; /* Add horizontal padding for smaller screens */
+}
+
+.bulletpoins li {
+  list-style: circle;
+  margin-left: 12px;
+  line-height: 20px;
+  margin-right: 70px;
+  margin-top: 10px;
+}
+
+.project {
+  color: #fff;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 25px;
+  margin-right: 70px;
+  margin-top: 20px;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .timeline-text {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  
   .bulletpoins {
-    color: var(--light-gray-70);
-    font-size: 12px;
-    text-align: justify;
+    font-size: 14px; /* Slightly larger for readability */
+    text-align: left; /* Left align on small screens */
   }
-
+  
   .bulletpoins li {
-    list-style: circle;
-    margin-left: 12px;
-    line-height: 20px;
-    margin-right: 70px;
-    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 20px; /* Reduce right margin */
+    line-height: 1.4em;
+    margin-top: 8px;
   }
-
+  
   .project {
-    color: #fff;
-    font-size: 12px;
-    font-style: italic;
-    line-height: 25px;
-    margin-right: 70px;
-    margin-top: 20px;
+    font-size: 14px;
+    margin-right: 20px; /* Reduce right margin */
+    margin-top: 15px;
+    line-height: 1.5em;
   }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+  .bulletpoins {
+    font-size: 13px;
+  }
+  
+  .bulletpoins li {
+    margin-left: 8px;
+    margin-right: 15px;
+  }
+  
+  .project {
+    font-size: 13px;
+  }
+}
 }
